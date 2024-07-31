@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: java
-        image: rohansharma91/jenkinsjavatest:replace
+        image: rohansharma91/jenkinsjavatest:27
         ports:
         - containerPort: 80
