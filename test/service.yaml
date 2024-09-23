@@ -1,7 +1,7 @@
 apiversion: v1
 kind: Service
 metadata:
- name: java-service
+ name: javaservice
 spec:
   type: NodePort
   selector:
