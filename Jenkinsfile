@@ -49,7 +49,7 @@ pipeline {
     stage('Update Deployment File') {
         environment {
             GIT_REPO_NAME = "devops-Terraform-pipeline"
-            GIT_USER_NAME = "rohansharma91"
+            GIT_USER_NAME = "delete_me"
         }
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
