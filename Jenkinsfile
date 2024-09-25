@@ -51,7 +51,7 @@ pipeline {
                     sed -i "s+rohansharma91/jenkins.*+rohansharma91/jenkins:${BUILD_NUMBER}+g" test/pod.yaml
                     git add test/pod.yaml
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
-                    git fetch
+                    git pull
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
                 '''
                 }
