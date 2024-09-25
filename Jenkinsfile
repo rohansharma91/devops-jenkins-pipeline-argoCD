@@ -4,12 +4,12 @@ pipeline {
       image 'abhishekf5/maven-abhishek-docker-agent:v1'
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
     }
+  }
     environment {
         IMAGE_NAME = 'rohansharma91/jenkins:${BUILD_NUMBER}'
         
     }
 
-  }
   stages {
     stage('Checkout') {
       steps {
