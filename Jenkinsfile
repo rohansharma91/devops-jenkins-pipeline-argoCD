@@ -39,6 +39,12 @@ pipeline {
         }
       }
     }
+    stage ('Image scanning'){
+      steps{
+        sh 'trivy image $(IMAGE_NAME) > scanning.txt
+      }
+    }
+    
     stage('Update Deployment File') {
         environment {
             GIT_REPO_NAME = "delete_me"
