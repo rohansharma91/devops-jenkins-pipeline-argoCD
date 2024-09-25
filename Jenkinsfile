@@ -50,7 +50,7 @@ pipeline {
     
     stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "delete_me"
+            GIT_REPO_NAME = "devops-Terraform-pipeline"
             GIT_USER_NAME = "rohansharma91"
         }
         steps {
