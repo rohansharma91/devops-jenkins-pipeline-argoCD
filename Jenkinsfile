@@ -41,7 +41,7 @@ pipeline {
     }
     stage ('Image scanning'){
       steps{
-        sh 'trivy image $(IMAGE_NAME) > scanning.txt
+        sh 'trivy image $(IMAGE_NAME) > "scanning.txt"
       }
     }
     
