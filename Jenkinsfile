@@ -59,7 +59,7 @@ pipeline {
                     git config user.email "rohan.sharma91@outlook.com"
                     git config user.name "rohansharma91"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    sed -i "s+rohansharma91/jenkins.*+rohansharma91/jenkins:${BUILD_NUMBER}+g" test/pod.yaml
+                    sed -i "s+rohansharma91/jenkins.*+rohansharma91/jenkins:${BUILD_NUMBER}+g" apps/values.yaml
                     git add test/pod.yaml
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
                     git pull https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main --allow-unrelated-histories
