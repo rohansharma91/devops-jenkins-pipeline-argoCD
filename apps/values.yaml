@@ -5,8 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: rohansharma91/jenkins
-  tag: 0.1
+  repository: rohansharma91/jenkins:2
   pullPolicy: IfNotPresent
 
 containerPort: 80
