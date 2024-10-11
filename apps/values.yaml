@@ -15,9 +15,9 @@ service:
   port: 80
 
 ingress:
-  enabled: false
+  enabled: true
   annotations: {}
-    # kubernetes.io/ingress.class: nginx
+    kubernetes.io/ingress.class: kong
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
